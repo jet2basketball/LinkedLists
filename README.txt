@@ -1,0 +1,1 @@
+Skeleton for nodes and linked lists in both python and java.
