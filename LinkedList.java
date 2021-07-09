@@ -47,12 +47,12 @@ public class LinkedList {
         }
     }
 
-    public void addNode(int valAfter, Node nodeToAdd) {
+    public void addNode(int valBefore, Node nodeToAdd) {
         Node currentNode = this.getHeadNode(); 
 
         while(currentNode != null) {
             Node nextNode = currentNode.getNextNode(); 
-            if(nextNode.getValue() == valAfter) {
+            if(currentNode.getValue() == valBefore) {
                 currentNode.setNextNode(nodeToAdd);
                 nodeToAdd.setNextNode(nextNode);
                 currentNode = null; 
@@ -79,7 +79,7 @@ public class LinkedList {
         ll.setNewBeginning(negativeOne);
         ll.removeNode(-1);
         ll.removeNode(2);
-        ll.addNode(3,two );
+        ll.addNode(1,two );
         System.out.println(ll.stringifyList()); 
 
     }

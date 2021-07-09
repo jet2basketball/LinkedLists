@@ -50,12 +50,12 @@ class LinkedList:
                 else: 
                     current_node = next_node 
     
-    def add_node(self, val_after, node_to_add): 
+    def add_node(self, val_before, node_to_add): 
         current_node = self.get_head_node() 
 
         while current_node: 
             next_node = current_node.get_next_node() 
-            if next_node.get_value() == val_after: 
+            if current_node.get_value() == val_before: 
                 current_node.set_next_node(node_to_add) 
                 node_to_add.set_next_node(next_node)
                 current_node = None 
@@ -72,6 +72,6 @@ d = Node(0, c)
 ll = LinkedList(d)
 ll.set_new_beginning(Node(-1))
 ll.remove_node(-1) 
-ll.add_node(3, Node(2.5))
+ll.add_node(2, Node(2.5))
 print(ll.stringify_list()) 
     
